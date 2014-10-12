@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Quanlyhop" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=Quanlyhop;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DefaultConnection" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BINHLUAN" Member="BINHLUANs">
+    <Type Name="BINHLUAN">
+      <Column Name="DIENBIEN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NGUOIBINHLUAN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOIDUNG" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="THOIGIAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="CANBO_BINHLUAN" Member="CANBO" ThisKey="NGUOIBINHLUAN" OtherKey="ID" Type="CANBO" IsForeignKey="true" />
+      <Association Name="DIENBIENCUOCHOP_BINHLUAN" Member="DIENBIENCUOCHOP" ThisKey="DIENBIEN" OtherKey="ID" Type="DIENBIENCUOCHOP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRANGTHAIKEHOACH" Member="TRANGTHAIKEHOACHes">
+    <Type Name="TRANGTHAIKEHOACH">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="YNGHIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TRANGTHAIKEHOACH_KEHOACHHOP" Member="KEHOACHHOPs" ThisKey="ID" OtherKey="TRANGTHAI" Type="KEHOACHHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CANBO" Member="CANBOs">
+    <Type Name="CANBO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GIOITINH" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MANV" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="HONHANVIEN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TENNHANVIEN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="COHIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CANBO_BINHLUAN" Member="BINHLUANs" ThisKey="ID" OtherKey="NGUOIBINHLUAN" Type="BINHLUAN" />
+      <Association Name="CANBO_DIENBIENCUOCHOP" Member="DIENBIENCUOCHOPs" ThisKey="ID" OtherKey="NGUOIGHI" Type="DIENBIENCUOCHOP" />
+      <Association Name="CANBO_DIENBIENCUOCHOP1" Member="DIENBIENCUOCHOPs1" ThisKey="ID" OtherKey="TACGIA" Type="DIENBIENCUOCHOP" />
+      <Association Name="CANBO_KEHOACHHOP" Member="KEHOACHHOPs" ThisKey="ID" OtherKey="NGUOICHUTRI" Type="KEHOACHHOP" />
+      <Association Name="CANBO_KEHOACHHOP1" Member="KEHOACHHOPs1" ThisKey="ID" OtherKey="THUKY" Type="KEHOACHHOP" />
+      <Association Name="CANBO_MOIHOP" Member="MOIHOPs" ThisKey="ID" OtherKey="NGUOINHAN" Type="MOIHOP" />
+      <Association Name="CANBO_TAIKHOANDANGNHAP" Member="TAIKHOANDANGNHAPs" ThisKey="ID" OtherKey="CUACANBO" Type="TAIKHOANDANGNHAP" />
+      <Association Name="GIOITINHCANBO_CANBO" Member="GIOITINHCANBO" ThisKey="GIOITINH" OtherKey="ID" Type="GIOITINHCANBO" IsForeignKey="true" />
+      <Association Name="TAIKHOANDANGNHAP_CANBO" Member="TAIKHOANDANGNHAP" ThisKey="USERNAME" OtherKey="USERNAME" Type="TAIKHOANDANGNHAP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COQUYEN" Member="COQUYENs">
+    <Type Name="COQUYEN">
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QUYENTRUYCAP" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KICHHOAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="QUYENTRUYCAP_COQUYEN" Member="QUYENTRUYCAP1" ThisKey="QUYENTRUYCAP" OtherKey="ID" Type="QUYENTRUYCAP" IsForeignKey="true" />
+      <Association Name="TAIKHOANDANGNHAP_COQUYEN" Member="TAIKHOANDANGNHAP" ThisKey="USERNAME" OtherKey="USERNAME" Type="TAIKHOANDANGNHAP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUOCHOP" Member="CUOCHOPs">
+    <Type Name="CUOCHOP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TEN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CHUDE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="COHIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CUOCHOP_KEHOACHHOP" Member="KEHOACHHOPs" ThisKey="ID" OtherKey="CUOCHOP" Type="KEHOACHHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIADIEM" Member="DIADIEMs">
+    <Type Name="DIADIEM">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENDIADIEM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIACHIDIADIEM" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="MIEUTA" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Association Name="DIADIEM_KEHOACHHOP" Member="KEHOACHHOPs" ThisKey="ID" OtherKey="DIADIEM" Type="KEHOACHHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIENBIENCUOCHOP" Member="DIENBIENCUOCHOPs">
+    <Type Name="DIENBIENCUOCHOP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_KEHOACH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_LOAI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TACGIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGUOIGHI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="THOIGIAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOIDUNG" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="DIENBIENCUOCHOP_BINHLUAN" Member="BINHLUANs" ThisKey="ID" OtherKey="DIENBIEN" Type="BINHLUAN" />
+      <Association Name="CANBO_DIENBIENCUOCHOP" Member="CANBO" ThisKey="NGUOIGHI" OtherKey="ID" Type="CANBO" IsForeignKey="true" />
+      <Association Name="CANBO_DIENBIENCUOCHOP1" Member="CANBO1" ThisKey="TACGIA" OtherKey="ID" Type="CANBO" IsForeignKey="true" />
+      <Association Name="KEHOACHHOP_DIENBIENCUOCHOP" Member="KEHOACHHOP" ThisKey="ID_KEHOACH" OtherKey="ID" Type="KEHOACHHOP" IsForeignKey="true" />
+      <Association Name="LOAIDIENBIEN_DIENBIENCUOCHOP" Member="LOAIDIENBIEN" ThisKey="ID_LOAI" OtherKey="ID" Type="LOAIDIENBIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GIOITINHCANBO" Member="GIOITINHCANBOs">
+    <Type Name="GIOITINHCANBO">
+      <Column Name="ID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="YNGHIA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="GIOITINHCANBO_CANBO" Member="CANBOs" ThisKey="ID" OtherKey="GIOITINH" Type="CANBO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KEHOACHHOP" Member="KEHOACHHOPs">
+    <Type Name="KEHOACHHOP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUOCHOP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DIADIEM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NGUOICHUTRI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TRANGTHAI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="THUKY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NGAYGIOBATDAU" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SONGUOI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="THOIGIANTIENHANH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COHIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="KEHOACHHOP_DIENBIENCUOCHOP" Member="DIENBIENCUOCHOPs" ThisKey="ID" OtherKey="ID_KEHOACH" Type="DIENBIENCUOCHOP" />
+      <Association Name="KEHOACHHOP_MOIHOP" Member="MOIHOPs" ThisKey="ID" OtherKey="KEHOACHHOP" Type="MOIHOP" />
+      <Association Name="CUOCHOP_KEHOACHHOP" Member="CUOCHOP1" ThisKey="CUOCHOP" OtherKey="ID" Type="CUOCHOP" IsForeignKey="true" />
+      <Association Name="CANBO_KEHOACHHOP" Member="CANBO" ThisKey="NGUOICHUTRI" OtherKey="ID" Type="CANBO" IsForeignKey="true" />
+      <Association Name="DIADIEM_KEHOACHHOP" Member="DIADIEM1" ThisKey="DIADIEM" OtherKey="ID" Type="DIADIEM" IsForeignKey="true" />
+      <Association Name="TRANGTHAIKEHOACH_KEHOACHHOP" Member="TRANGTHAIKEHOACH" ThisKey="TRANGTHAI" OtherKey="ID" Type="TRANGTHAIKEHOACH" IsForeignKey="true" />
+      <Association Name="CANBO_KEHOACHHOP1" Member="CANBO1" ThisKey="THUKY" OtherKey="ID" Type="CANBO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAIDIENBIEN" Member="LOAIDIENBIENs">
+    <Type Name="LOAIDIENBIEN">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="YNGHIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LOAIDIENBIEN_DIENBIENCUOCHOP" Member="DIENBIENCUOCHOPs" ThisKey="ID" OtherKey="ID_LOAI" Type="DIENBIENCUOCHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MOIHOP" Member="MOIHOPs">
+    <Type Name="MOIHOP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NGUOINHAN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KEHOACHHOP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QUYETDINH" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LYDOQUYETDINH" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DAQUYETDINH" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="COHIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CANBO_MOIHOP" Member="CANBO" ThisKey="NGUOINHAN" OtherKey="ID" Type="CANBO" IsForeignKey="true" />
+      <Association Name="KEHOACHHOP_MOIHOP" Member="KEHOACHHOP1" ThisKey="KEHOACHHOP" OtherKey="ID" Type="KEHOACHHOP" IsForeignKey="true" />
+      <Association Name="QUYETDINHCUANGUOINHAN_MOIHOP" Member="QUYETDINHCUANGUOINHAN" ThisKey="QUYETDINH" OtherKey="ID" Type="QUYETDINHCUANGUOINHAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHOMCOQUYEN" Member="NHOMCOQUYENs">
+    <Type Name="NHOMCOQUYEN">
+      <Column Name="NHOM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QUYENTRUYCAP" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KICHHOAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="NHOMQUYEN_NHOMCOQUYEN" Member="NHOMQUYEN" ThisKey="NHOM" OtherKey="ID" Type="NHOMQUYEN" IsForeignKey="true" />
+      <Association Name="QUYENTRUYCAP_NHOMCOQUYEN" Member="QUYENTRUYCAP1" ThisKey="QUYENTRUYCAP" OtherKey="ID" Type="QUYENTRUYCAP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHOMQUYEN" Member="NHOMQUYENs">
+    <Type Name="NHOMQUYEN">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENNHOM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="NHOMQUYEN_NHOMCOQUYEN" Member="NHOMCOQUYENs" ThisKey="ID" OtherKey="NHOM" Type="NHOMCOQUYEN" />
+      <Association Name="NHOMQUYEN_THUOCNHOM" Member="THUOCNHOMs" ThisKey="ID" OtherKey="IDNHOM" Type="THUOCNHOM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUYENTRUYCAP" Member="QUYENTRUYCAPs">
+    <Type Name="QUYENTRUYCAP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENQUYEN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VALUE" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="QUYENTRUYCAP_COQUYEN" Member="COQUYENs" ThisKey="ID" OtherKey="QUYENTRUYCAP" Type="COQUYEN" />
+      <Association Name="QUYENTRUYCAP_NHOMCOQUYEN" Member="NHOMCOQUYENs" ThisKey="ID" OtherKey="QUYENTRUYCAP" Type="NHOMCOQUYEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUYETDINHCUANGUOINHAN" Member="QUYETDINHCUANGUOINHANs">
+    <Type Name="QUYETDINHCUANGUOINHAN">
+      <Column Name="ID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="YNGHIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="QUYETDINHCUANGUOINHAN_MOIHOP" Member="MOIHOPs" ThisKey="ID" OtherKey="QUYETDINH" Type="MOIHOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOANDANGNHAP" Member="TAIKHOANDANGNHAPs">
+    <Type Name="TAIKHOANDANGNHAP">
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CUACANBO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TRANGTHAIDANGNHAP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DANGNHAPSAUCUNG" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COHIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TAIKHOANDANGNHAP_CANBO" Member="CANBOs" ThisKey="USERNAME" OtherKey="USERNAME" Type="CANBO" />
+      <Association Name="TAIKHOANDANGNHAP_COQUYEN" Member="COQUYENs" ThisKey="USERNAME" OtherKey="USERNAME" Type="COQUYEN" />
+      <Association Name="TAIKHOANDANGNHAP_THUOCNHOM" Member="THUOCNHOMs" ThisKey="USERNAME" OtherKey="USERNAME" Type="THUOCNHOM" />
+      <Association Name="CANBO_TAIKHOANDANGNHAP" Member="CANBO" ThisKey="CUACANBO" OtherKey="ID" Type="CANBO" IsForeignKey="true" />
+      <Association Name="TRANGTHAIDANGNHAP_TAIKHOANDANGNHAP" Member="TRANGTHAIDANGNHAP1" ThisKey="TRANGTHAIDANGNHAP" OtherKey="ID" Type="TRANGTHAIDANGNHAP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THUOCNHOM" Member="THUOCNHOMs">
+    <Type Name="THUOCNHOM">
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDNHOM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="NHOMQUYEN_THUOCNHOM" Member="NHOMQUYEN" ThisKey="IDNHOM" OtherKey="ID" Type="NHOMQUYEN" IsForeignKey="true" />
+      <Association Name="TAIKHOANDANGNHAP_THUOCNHOM" Member="TAIKHOANDANGNHAP" ThisKey="USERNAME" OtherKey="USERNAME" Type="TAIKHOANDANGNHAP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRANGTHAIDANGNHAP" Member="TRANGTHAIDANGNHAPs">
+    <Type Name="TRANGTHAIDANGNHAP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="YNGHIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="TRANGTHAIDANGNHAP_TAIKHOANDANGNHAP" Member="TAIKHOANDANGNHAPs" ThisKey="ID" OtherKey="TRANGTHAIDANGNHAP" Type="TAIKHOANDANGNHAP" />
+    </Type>
+  </Table>
+</Database>
