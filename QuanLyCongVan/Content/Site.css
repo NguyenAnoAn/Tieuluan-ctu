@@ -49,7 +49,36 @@ mark {
 .float-right {
     float: right;
 }
+.menu_left {
+    float:left;
+    background-color:lightgreen;   
+    width:200px;
+    margin:auto;
+    padding-bottom:2em;
+        
+}
 
+    .menu_left .headpan {
+        background-color: darkgreen;
+        height: 25px;
+        width: 200px;
+        margin: auto;
+    }
+
+    .menu_left .headpan #text{
+         font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+         color: crimson;
+         margin:0;
+         width:200px;
+    }
+.body_right {
+    margin-left: 4px;
+    float: left;
+    background-color:lightskyblue;   
+    width:720px;
+    padding-left:0.25em;
+    padding-bottom:0.5em;
+}
 .clear-fix:after {
     content: ".";
     clear: both;
@@ -100,13 +129,13 @@ h5, h6 {
 
 #body {
     background-color: #efeeef;
-    clear: both;
+    clear: both;    
     padding-bottom: 35px;
 }
 
     .main-content {
         background: url("../Images/accent.png") no-repeat;
-        padding-left: 10px;
+        padding-left: 1px;
         padding-top: 30px;
     }
 
@@ -129,21 +158,23 @@ footer {
 /* site title
 ----------------------------------------------------------*/
 .site-title {
-    color: #c8c8c8;
-    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    color: crimson;
+    font-family: Rockwell, Consolas, "Times New Roman", Courier, monospace;
     font-size: 2.3em;
     margin: 0;
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
     background: none;
-    color: #c8c8c8;
+    color: blueviolet;
+    font-family: "Times New Roman", Courier, monospace;
+    font-weight:bold;
     outline: none;
     text-decoration: none;
 }
 
 
-/* login
+/* logic
 ----------------------------------------------------------*/
 #login {
     display: block;

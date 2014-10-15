@@ -12,7 +12,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Hệ Thống Quản Lý Cuộc Họp", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -20,19 +20,30 @@
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Trang Cá Nhân", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Giới thiệu ", "About", "Home")</li>
+                            <li>@Html.ActionLink("Liên Hệ", "Contact", "Home")</li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
-        <div id="body">
+        
+        <div id="body"> 
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+                @if (Request.IsAuthenticated){
+                <div class="menu_left">
+                    <div class="headpan">
+                      <h3 id="text" style="padding-left:3em">Chức năng</h3>  
+                    </div>
+                    @RenderSection("menu_left", required: false)
+                </div>
+                }
+                <div class="body_right">
+                    @RenderBody()
+                </div>
+            </section>          
         </div>
         <footer>
             <div class="content-wrapper">
