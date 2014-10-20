@@ -10,9 +10,15 @@ namespace QuanLyCongVan.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = " Thông tin mời họp";
+            if (Request.IsAuthenticated)
+            {
+                ViewBag.Message = " Thông tin mời họp";
 
-            return View();
+                return View();
+            }else
+            {
+               return RedirectToAction("login","account");
+            }
         }
 
         public ActionResult About()
