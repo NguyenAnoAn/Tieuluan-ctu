@@ -1,0 +1,8 @@
+E:\Web\QuanLyCuocHop\Helper\bin\Debug\Helper.dll
+E:\Web\QuanLyCuocHop\Helper\bin\Debug\Helper.pdb
+E:\Web\QuanLyCuocHop\Helper\obj\Debug\Helper.dll
+E:\Web\QuanLyCuocHop\Helper\obj\Debug\Helper.pdb
+E:\Web\QuanLyCuocHopol\Helper\bin\Debug\Helper.dll
+E:\Web\QuanLyCuocHopol\Helper\bin\Debug\Helper.pdb
+E:\Web\QuanLyCuocHopol\Helper\obj\Debug\Helper.dll
+E:\Web\QuanLyCuocHopol\Helper\obj\Debug\Helper.pdb
