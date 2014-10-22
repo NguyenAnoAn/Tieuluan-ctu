@@ -8,7 +8,9 @@ namespace QuanLyCongVan.Models
 {
     public class MNguoiDung
     {
-
+        public string Hoten { get; set; }
+        public string Chucvu { get; set; }
+        public string Username { get; set; }
     }
     public class NguoiDungDBContext : DbContext
     {

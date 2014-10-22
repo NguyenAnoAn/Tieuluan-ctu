@@ -18,13 +18,16 @@ namespace QuanLyCongVan.Models
         public DbSet<UserProfile> UserProfiles { get; set; }
     }
 
-    [Table("UserProfile")]
+    [Table("TAIKHOANDANGNHAP")]
     public class UserProfile
     {
+       
+        public int UserId { get; set; }
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
         public string UserName { get; set; }
+        public DateTime DANGNHAPSAUCUNG { get; set; }
+        public bool COHIEULUC { get; set; }
     }
 
     public class RegisterExternalLoginModel
@@ -58,15 +61,15 @@ namespace QuanLyCongVan.Models
     public class LoginModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "Tên Đăng Nhập")]
         public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mật Khẩu ")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name="Ghi nhớ tài khoản?")]
         public bool RememberMe { get; set; }
     }
 

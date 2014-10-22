@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlyhopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="QuanlyhopModelStoreContainer">
+    <EntitySet Name="BINHLUAN" EntityType="QuanlyhopModel.Store.BINHLUAN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CANBO" EntityType="QuanlyhopModel.Store.CANBO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COQUYEN" EntityType="QuanlyhopModel.Store.COQUYEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CUOCHOP" EntityType="QuanlyhopModel.Store.CUOCHOP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIADIEM" EntityType="QuanlyhopModel.Store.DIADIEM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIENBIENCUOCHOP" EntityType="QuanlyhopModel.Store.DIENBIENCUOCHOP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GIOITINHCANBO" EntityType="QuanlyhopModel.Store.GIOITINHCANBO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KEHOACHHOP" EntityType="QuanlyhopModel.Store.KEHOACHHOP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LOAIDIENBIEN" EntityType="QuanlyhopModel.Store.LOAIDIENBIEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MOIHOP" EntityType="QuanlyhopModel.Store.MOIHOP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NHOMCOQUYEN" EntityType="QuanlyhopModel.Store.NHOMCOQUYEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NHOMQUYEN" EntityType="QuanlyhopModel.Store.NHOMQUYEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QUYENTRUYCAP" EntityType="QuanlyhopModel.Store.QUYENTRUYCAP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QUYETDINHCUANGUOINHAN" EntityType="QuanlyhopModel.Store.QUYETDINHCUANGUOINHAN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TAIKHOANDANGNHAP" EntityType="QuanlyhopModel.Store.TAIKHOANDANGNHAP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THUOCNHOM" EntityType="QuanlyhopModel.Store.THUOCNHOM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TRANGTHAIDANGNHAP" EntityType="QuanlyhopModel.Store.TRANGTHAIDANGNHAP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TRANGTHAIKEHOACH" EntityType="QuanlyhopModel.Store.TRANGTHAIKEHOACH" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_BINHLUAN_BINHLUAN_CANBO" Association="QuanlyhopModel.Store.FK_BINHLUAN_BINHLUAN_CANBO">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="BINHLUAN" EntitySet="BINHLUAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BINHLUAN_BINHLUAN2_DIENBIEN" Association="QuanlyhopModel.Store.FK_BINHLUAN_BINHLUAN2_DIENBIEN">
+      <End Role="DIENBIENCUOCHOP" EntitySet="DIENBIENCUOCHOP" />
+      <End Role="BINHLUAN" EntitySet="BINHLUAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CANBO_RELATIONS_GIOITINH" Association="QuanlyhopModel.Store.FK_CANBO_RELATIONS_GIOITINH">
+      <End Role="GIOITINHCANBO" EntitySet="GIOITINHCANBO" />
+      <End Role="CANBO" EntitySet="CANBO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CANBO_RELATIONS_TAIKHOAN" Association="QuanlyhopModel.Store.FK_CANBO_RELATIONS_TAIKHOAN">
+      <End Role="TAIKHOANDANGNHAP" EntitySet="TAIKHOANDANGNHAP" />
+      <End Role="CANBO" EntitySet="CANBO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COQUYEN_COQUYEN_QUYENTRU" Association="QuanlyhopModel.Store.FK_COQUYEN_COQUYEN_QUYENTRU">
+      <End Role="QUYENTRUYCAP" EntitySet="QUYENTRUYCAP" />
+      <End Role="COQUYEN" EntitySet="COQUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COQUYEN_COQUYEN2_TAIKHOAN" Association="QuanlyhopModel.Store.FK_COQUYEN_COQUYEN2_TAIKHOAN">
+      <End Role="TAIKHOANDANGNHAP" EntitySet="TAIKHOANDANGNHAP" />
+      <End Role="COQUYEN" EntitySet="COQUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIENBIEN_RELATIONS_CANBO" Association="QuanlyhopModel.Store.FK_DIENBIEN_RELATIONS_CANBO">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="DIENBIENCUOCHOP" EntitySet="DIENBIENCUOCHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIENBIEN_RELATIONS_KEHOACHH" Association="QuanlyhopModel.Store.FK_DIENBIEN_RELATIONS_KEHOACHH">
+      <End Role="KEHOACHHOP" EntitySet="KEHOACHHOP" />
+      <End Role="DIENBIENCUOCHOP" EntitySet="DIENBIENCUOCHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIENBIEN_RELATIONS_LOAIDIEN" Association="QuanlyhopModel.Store.FK_DIENBIEN_RELATIONS_LOAIDIEN">
+      <End Role="LOAIDIENBIEN" EntitySet="LOAIDIENBIEN" />
+      <End Role="DIENBIENCUOCHOP" EntitySet="DIENBIENCUOCHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIENBIEN_TACNHAN_CANBO" Association="QuanlyhopModel.Store.FK_DIENBIEN_TACNHAN_CANBO">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="DIENBIENCUOCHOP" EntitySet="DIENBIENCUOCHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KEHOACHH_KEHOACHHO_CUOCHOP" Association="QuanlyhopModel.Store.FK_KEHOACHH_KEHOACHHO_CUOCHOP">
+      <End Role="CUOCHOP" EntitySet="CUOCHOP" />
+      <End Role="KEHOACHHOP" EntitySet="KEHOACHHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KEHOACHH_RELATIONS_CANBO" Association="QuanlyhopModel.Store.FK_KEHOACHH_RELATIONS_CANBO">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="KEHOACHHOP" EntitySet="KEHOACHHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KEHOACHH_RELATIONS_DIADIEM" Association="QuanlyhopModel.Store.FK_KEHOACHH_RELATIONS_DIADIEM">
+      <End Role="DIADIEM" EntitySet="DIADIEM" />
+      <End Role="KEHOACHHOP" EntitySet="KEHOACHHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KEHOACHH_RELATIONS_TRANGTHA" Association="QuanlyhopModel.Store.FK_KEHOACHH_RELATIONS_TRANGTHA">
+      <End Role="TRANGTHAIKEHOACH" EntitySet="TRANGTHAIKEHOACH" />
+      <End Role="KEHOACHHOP" EntitySet="KEHOACHHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KEHOACHH_THUKY_CANBO" Association="QuanlyhopModel.Store.FK_KEHOACHH_THUKY_CANBO">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="KEHOACHHOP" EntitySet="KEHOACHHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOIHOP_RELATIONS_CANBO" Association="QuanlyhopModel.Store.FK_MOIHOP_RELATIONS_CANBO">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="MOIHOP" EntitySet="MOIHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOIHOP_RELATIONS_KEHOACHH" Association="QuanlyhopModel.Store.FK_MOIHOP_RELATIONS_KEHOACHH">
+      <End Role="KEHOACHHOP" EntitySet="KEHOACHHOP" />
+      <End Role="MOIHOP" EntitySet="MOIHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOIHOP_RELATIONS_QUYETDIN" Association="QuanlyhopModel.Store.FK_MOIHOP_RELATIONS_QUYETDIN">
+      <End Role="QUYETDINHCUANGUOINHAN" EntitySet="QUYETDINHCUANGUOINHAN" />
+      <End Role="MOIHOP" EntitySet="MOIHOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHOMCOQU_NHOMCOQUY_NHOMQUYE" Association="QuanlyhopModel.Store.FK_NHOMCOQU_NHOMCOQUY_NHOMQUYE">
+      <End Role="NHOMQUYEN" EntitySet="NHOMQUYEN" />
+      <End Role="NHOMCOQUYEN" EntitySet="NHOMCOQUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHOMCOQU_NHOMCOQUY_QUYENTRU" Association="QuanlyhopModel.Store.FK_NHOMCOQU_NHOMCOQUY_QUYENTRU">
+      <End Role="QUYENTRUYCAP" EntitySet="QUYENTRUYCAP" />
+      <End Role="NHOMCOQUYEN" EntitySet="NHOMCOQUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TAIKHOAN_RELATIONS_CANBO" Association="QuanlyhopModel.Store.FK_TAIKHOAN_RELATIONS_CANBO">
+      <End Role="CANBO" EntitySet="CANBO" />
+      <End Role="TAIKHOANDANGNHAP" EntitySet="TAIKHOANDANGNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TAIKHOAN_RELATIONS_TRANGTHA" Association="QuanlyhopModel.Store.FK_TAIKHOAN_RELATIONS_TRANGTHA">
+      <End Role="TRANGTHAIDANGNHAP" EntitySet="TRANGTHAIDANGNHAP" />
+      <End Role="TAIKHOANDANGNHAP" EntitySet="TAIKHOANDANGNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_THUOCNHO_THUOCNHOM_NHOMQUYE" Association="QuanlyhopModel.Store.FK_THUOCNHO_THUOCNHOM_NHOMQUYE">
+      <End Role="NHOMQUYEN" EntitySet="NHOMQUYEN" />
+      <End Role="THUOCNHOM" EntitySet="THUOCNHOM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_THUOCNHO_THUOCNHOM_TAIKHOAN" Association="QuanlyhopModel.Store.FK_THUOCNHO_THUOCNHOM_TAIKHOAN">
+      <End Role="TAIKHOANDANGNHAP" EntitySet="TAIKHOANDANGNHAP" />
+      <End Role="THUOCNHOM" EntitySet="THUOCNHOM" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BINHLUAN">
+    <Key>
+      <PropertyRef Name="DIENBIEN" />
+      <PropertyRef Name="NGUOIBINHLUAN" />
+    </Key>
+    <Property Name="DIENBIEN" Type="int" Nullable="false" />
+    <Property Name="NGUOIBINHLUAN" Type="int" Nullable="false" />
+    <Property Name="NOIDUNG" Type="text" />
+    <Property Name="THOIGIAN" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CANBO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GIOITINH" Type="smallint" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="MANV" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="HONHANVIEN" Type="varchar" MaxLength="50" />
+    <Property Name="TENNHANVIEN" Type="varchar" MaxLength="30" />
+    <Property Name="NGAYSINH" Type="varchar" MaxLength="10" />
+    <Property Name="DIACHI" Type="varchar" MaxLength="255" />
+    <Property Name="COHIEULUC" Type="bit" />
+  </EntityType>
+  <EntityType Name="COQUYEN">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+      <PropertyRef Name="QUYENTRUYCAP" />
+    </Key>
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="QUYENTRUYCAP" Type="int" Nullable="false" />
+    <Property Name="KICHHOAT" Type="bit" />
+  </EntityType>
+  <EntityType Name="CUOCHOP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TEN" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CHUDE" Type="varchar" MaxLength="255" />
+    <Property Name="COHIEULUC" Type="bit" />
+  </EntityType>
+  <EntityType Name="DIADIEM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TENDIADIEM" Type="varchar" MaxLength="50" />
+    <Property Name="DIACHIDIADIEM" Type="varchar" MaxLength="255" />
+    <Property Name="MIEUTA" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="DIENBIENCUOCHOP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID_KEHOACH" Type="int" Nullable="false" />
+    <Property Name="ID_LOAI" Type="int" Nullable="false" />
+    <Property Name="TACGIA" Type="int" />
+    <Property Name="NGUOIGHI" Type="int" Nullable="false" />
+    <Property Name="THOIGIAN" Type="datetime" />
+    <Property Name="NOIDUNG" Type="text" />
+  </EntityType>
+  <EntityType Name="GIOITINHCANBO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" Nullable="false" />
+    <Property Name="YNGHIA" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="KEHOACHHOP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CUOCHOP" Type="int" Nullable="false" />
+    <Property Name="DIADIEM" Type="int" Nullable="false" />
+    <Property Name="NGUOICHUTRI" Type="int" Nullable="false" />
+    <Property Name="TRANGTHAI" Type="int" Nullable="false" />
+    <Property Name="THUKY" Type="int" />
+    <Property Name="NGAYGIOBATDAU" Type="datetime" />
+    <Property Name="SONGUOI" Type="int" />
+    <Property Name="THOIGIANTIENHANH" Type="datetime" />
+    <Property Name="COHIEULUC" Type="bit" />
+  </EntityType>
+  <EntityType Name="LOAIDIENBIEN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="YNGHIA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MOIHOP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NGUOINHAN" Type="int" Nullable="false" />
+    <Property Name="KEHOACHHOP" Type="int" Nullable="false" />
+    <Property Name="QUYETDINH" Type="smallint" Nullable="false" />
+    <Property Name="LYDOQUYETDINH" Type="varchar" MaxLength="255" />
+    <Property Name="DAQUYETDINH" Type="bit" />
+    <Property Name="COHIEULUC" Type="bit" />
+  </EntityType>
+  <EntityType Name="NHOMCOQUYEN">
+    <Key>
+      <PropertyRef Name="NHOM" />
+      <PropertyRef Name="QUYENTRUYCAP" />
+    </Key>
+    <Property Name="NHOM" Type="int" Nullable="false" />
+    <Property Name="QUYENTRUYCAP" Type="int" Nullable="false" />
+    <Property Name="KICHHOAT" Type="bit" />
+  </EntityType>
+  <EntityType Name="NHOMQUYEN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TENNHOM" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QUYENTRUYCAP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TENQUYEN" Type="varchar" MaxLength="50" />
+    <Property Name="VALUE" Type="bigint" />
+  </EntityType>
+  <EntityType Name="QUYETDINHCUANGUOINHAN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" Nullable="false" />
+    <Property Name="YNGHIA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TAIKHOANDANGNHAP">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+    </Key>
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID_CANBO" Type="int" Nullable="false" />
+    <Property Name="TRANGTHAIDANGNHAP" Type="int" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="50" />
+    <Property Name="DANGNHAPSAUCUNG" Type="datetime" />
+    <Property Name="COHIEULUC" Type="bit" />
+  </EntityType>
+  <EntityType Name="THUOCNHOM">
+    <Key>
+      <PropertyRef Name="USERNAME" />
+      <PropertyRef Name="IDNHOM" />
+    </Key>
+    <Property Name="USERNAME" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IDNHOM" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRANGTHAIDANGNHAP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="YNGHIA" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TRANGTHAIKEHOACH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="YNGHIA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_BINHLUAN_BINHLUAN_CANBO">
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="1" />
+    <End Role="BINHLUAN" Type="QuanlyhopModel.Store.BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="NGUOIBINHLUAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BINHLUAN_BINHLUAN2_DIENBIEN">
+    <End Role="DIENBIENCUOCHOP" Type="QuanlyhopModel.Store.DIENBIENCUOCHOP" Multiplicity="1" />
+    <End Role="BINHLUAN" Type="QuanlyhopModel.Store.BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIENBIENCUOCHOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="DIENBIEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CANBO_RELATIONS_GIOITINH">
+    <End Role="GIOITINHCANBO" Type="QuanlyhopModel.Store.GIOITINHCANBO" Multiplicity="1" />
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GIOITINHCANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CANBO">
+        <PropertyRef Name="GIOITINH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CANBO_RELATIONS_TAIKHOAN">
+    <End Role="TAIKHOANDANGNHAP" Type="QuanlyhopModel.Store.TAIKHOANDANGNHAP" Multiplicity="0..1" />
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOANDANGNHAP">
+        <PropertyRef Name="USERNAME" />
+      </Principal>
+      <Dependent Role="CANBO">
+        <PropertyRef Name="USERNAME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COQUYEN_COQUYEN_QUYENTRU">
+    <End Role="QUYENTRUYCAP" Type="QuanlyhopModel.Store.QUYENTRUYCAP" Multiplicity="1" />
+    <End Role="COQUYEN" Type="QuanlyhopModel.Store.COQUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUYENTRUYCAP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COQUYEN">
+        <PropertyRef Name="QUYENTRUYCAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COQUYEN_COQUYEN2_TAIKHOAN">
+    <End Role="TAIKHOANDANGNHAP" Type="QuanlyhopModel.Store.TAIKHOANDANGNHAP" Multiplicity="1" />
+    <End Role="COQUYEN" Type="QuanlyhopModel.Store.COQUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOANDANGNHAP">
+        <PropertyRef Name="USERNAME" />
+      </Principal>
+      <Dependent Role="COQUYEN">
+        <PropertyRef Name="USERNAME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIENBIEN_RELATIONS_CANBO">
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="1" />
+    <End Role="DIENBIENCUOCHOP" Type="QuanlyhopModel.Store.DIENBIENCUOCHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIENBIENCUOCHOP">
+        <PropertyRef Name="NGUOIGHI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIENBIEN_RELATIONS_KEHOACHH">
+    <End Role="KEHOACHHOP" Type="QuanlyhopModel.Store.KEHOACHHOP" Multiplicity="1" />
+    <End Role="DIENBIENCUOCHOP" Type="QuanlyhopModel.Store.DIENBIENCUOCHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KEHOACHHOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIENBIENCUOCHOP">
+        <PropertyRef Name="ID_KEHOACH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIENBIEN_RELATIONS_LOAIDIEN">
+    <End Role="LOAIDIENBIEN" Type="QuanlyhopModel.Store.LOAIDIENBIEN" Multiplicity="1" />
+    <End Role="DIENBIENCUOCHOP" Type="QuanlyhopModel.Store.DIENBIENCUOCHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIDIENBIEN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIENBIENCUOCHOP">
+        <PropertyRef Name="ID_LOAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIENBIEN_TACNHAN_CANBO">
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="0..1" />
+    <End Role="DIENBIENCUOCHOP" Type="QuanlyhopModel.Store.DIENBIENCUOCHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIENBIENCUOCHOP">
+        <PropertyRef Name="TACGIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KEHOACHH_KEHOACHHO_CUOCHOP">
+    <End Role="CUOCHOP" Type="QuanlyhopModel.Store.CUOCHOP" Multiplicity="1" />
+    <End Role="KEHOACHHOP" Type="QuanlyhopModel.Store.KEHOACHHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUOCHOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KEHOACHHOP">
+        <PropertyRef Name="CUOCHOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KEHOACHH_RELATIONS_CANBO">
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="1" />
+    <End Role="KEHOACHHOP" Type="QuanlyhopModel.Store.KEHOACHHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KEHOACHHOP">
+        <PropertyRef Name="NGUOICHUTRI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KEHOACHH_RELATIONS_DIADIEM">
+    <End Role="DIADIEM" Type="QuanlyhopModel.Store.DIADIEM" Multiplicity="1" />
+    <End Role="KEHOACHHOP" Type="QuanlyhopModel.Store.KEHOACHHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIADIEM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KEHOACHHOP">
+        <PropertyRef Name="DIADIEM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KEHOACHH_RELATIONS_TRANGTHA">
+    <End Role="TRANGTHAIKEHOACH" Type="QuanlyhopModel.Store.TRANGTHAIKEHOACH" Multiplicity="1" />
+    <End Role="KEHOACHHOP" Type="QuanlyhopModel.Store.KEHOACHHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANGTHAIKEHOACH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KEHOACHHOP">
+        <PropertyRef Name="TRANGTHAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KEHOACHH_THUKY_CANBO">
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="0..1" />
+    <End Role="KEHOACHHOP" Type="QuanlyhopModel.Store.KEHOACHHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KEHOACHHOP">
+        <PropertyRef Name="THUKY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOIHOP_RELATIONS_CANBO">
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="1" />
+    <End Role="MOIHOP" Type="QuanlyhopModel.Store.MOIHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MOIHOP">
+        <PropertyRef Name="NGUOINHAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOIHOP_RELATIONS_KEHOACHH">
+    <End Role="KEHOACHHOP" Type="QuanlyhopModel.Store.KEHOACHHOP" Multiplicity="1" />
+    <End Role="MOIHOP" Type="QuanlyhopModel.Store.MOIHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KEHOACHHOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MOIHOP">
+        <PropertyRef Name="KEHOACHHOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOIHOP_RELATIONS_QUYETDIN">
+    <End Role="QUYETDINHCUANGUOINHAN" Type="QuanlyhopModel.Store.QUYETDINHCUANGUOINHAN" Multiplicity="1" />
+    <End Role="MOIHOP" Type="QuanlyhopModel.Store.MOIHOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUYETDINHCUANGUOINHAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MOIHOP">
+        <PropertyRef Name="QUYETDINH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHOMCOQU_NHOMCOQUY_NHOMQUYE">
+    <End Role="NHOMQUYEN" Type="QuanlyhopModel.Store.NHOMQUYEN" Multiplicity="1" />
+    <End Role="NHOMCOQUYEN" Type="QuanlyhopModel.Store.NHOMCOQUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHOMQUYEN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NHOMCOQUYEN">
+        <PropertyRef Name="NHOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHOMCOQU_NHOMCOQUY_QUYENTRU">
+    <End Role="QUYENTRUYCAP" Type="QuanlyhopModel.Store.QUYENTRUYCAP" Multiplicity="1" />
+    <End Role="NHOMCOQUYEN" Type="QuanlyhopModel.Store.NHOMCOQUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUYENTRUYCAP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NHOMCOQUYEN">
+        <PropertyRef Name="QUYENTRUYCAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TAIKHOAN_RELATIONS_CANBO">
+    <End Role="CANBO" Type="QuanlyhopModel.Store.CANBO" Multiplicity="1" />
+    <End Role="TAIKHOANDANGNHAP" Type="QuanlyhopModel.Store.TAIKHOANDANGNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CANBO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TAIKHOANDANGNHAP">
+        <PropertyRef Name="ID_CANBO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TAIKHOAN_RELATIONS_TRANGTHA">
+    <End Role="TRANGTHAIDANGNHAP" Type="QuanlyhopModel.Store.TRANGTHAIDANGNHAP" Multiplicity="1" />
+    <End Role="TAIKHOANDANGNHAP" Type="QuanlyhopModel.Store.TAIKHOANDANGNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANGTHAIDANGNHAP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TAIKHOANDANGNHAP">
+        <PropertyRef Name="TRANGTHAIDANGNHAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_THUOCNHO_THUOCNHOM_NHOMQUYE">
+    <End Role="NHOMQUYEN" Type="QuanlyhopModel.Store.NHOMQUYEN" Multiplicity="1" />
+    <End Role="THUOCNHOM" Type="QuanlyhopModel.Store.THUOCNHOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHOMQUYEN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="THUOCNHOM">
+        <PropertyRef Name="IDNHOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_THUOCNHO_THUOCNHOM_TAIKHOAN">
+    <End Role="TAIKHOANDANGNHAP" Type="QuanlyhopModel.Store.TAIKHOANDANGNHAP" Multiplicity="1" />
+    <End Role="THUOCNHOM" Type="QuanlyhopModel.Store.THUOCNHOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOANDANGNHAP">
+        <PropertyRef Name="USERNAME" />
+      </Principal>
+      <Dependent Role="THUOCNHOM">
+        <PropertyRef Name="USERNAME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

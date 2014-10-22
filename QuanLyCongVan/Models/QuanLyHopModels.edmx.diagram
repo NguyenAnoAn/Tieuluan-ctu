@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8cb4e41faabe4033bc7227c76ee42225" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanlyhopModel.BINHLUAN" Width="1.5" PointX="10.5" PointY="6" IsExpanded="false" />
+        <EntityTypeShape EntityType="QuanlyhopModel.CANBO" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.COQUYEN" Width="1.5" PointX="11.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.CUOCHOP" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.DIADIEM" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.DIENBIENCUOCHOP" Width="1.5" PointX="13.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.GIOITINHCANBO" Width="1.5" PointX="6" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.KEHOACHHOP" Width="1.5" PointX="10.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.LOAIDIENBIEN" Width="1.5" PointX="11.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.MOIHOP" Width="1.5" PointX="12.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.NHOMCOQUYEN" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.NHOMQUYEN" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.QUYENTRUYCAP" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.QUYETDINHCUANGUOINHAN" Width="1.5" PointX="10.5" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.TAIKHOANDANGNHAP" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.TRANGTHAIDANGNHAP" Width="1.5" PointX="3.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanlyhopModel.TRANGTHAIKEHOACH" Width="1.5" PointX="8.25" PointY="19" IsExpanded="true" />
+        <AssociationConnector Association="QuanlyhopModel.FK_BINHLUAN_BINHLUAN_CANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_BINHLUAN_BINHLUAN2_DIENBIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_CANBO_RELATIONS_GIOITINH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_CANBO_RELATIONS_TAIKHOAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_DIENBIEN_RELATIONS_CANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_DIENBIEN_TACNHAN_CANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_KEHOACHH_RELATIONS_CANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_KEHOACHH_THUKY_CANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_MOIHOP_RELATIONS_CANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_TAIKHOAN_RELATIONS_CANBO" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_COQUYEN_COQUYEN_QUYENTRU" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_COQUYEN_COQUYEN2_TAIKHOAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_KEHOACHH_KEHOACHHO_CUOCHOP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_KEHOACHH_RELATIONS_DIADIEM" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_DIENBIEN_RELATIONS_KEHOACHH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_DIENBIEN_RELATIONS_LOAIDIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_KEHOACHH_RELATIONS_TRANGTHA" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_MOIHOP_RELATIONS_KEHOACHH" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_MOIHOP_RELATIONS_QUYETDIN" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_NHOMCOQU_NHOMCOQUY_NHOMQUYE" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_NHOMCOQU_NHOMCOQUY_QUYENTRU" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.FK_TAIKHOAN_RELATIONS_TRANGTHA" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanlyhopModel.THUOCNHOM" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

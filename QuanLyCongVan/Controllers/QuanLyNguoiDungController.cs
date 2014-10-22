@@ -13,7 +13,14 @@ namespace QuanLyCongVan.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var da = new List<Models.MNguoiDung>{
+                new Models.MNguoiDung{Chucvu="giam doc", Hoten = "Nguyen van beo", Username ="alibaba"
+                },
+                new Models.MNguoiDung{
+                    Hoten="tran van kheo",Chucvu="lao cong",Username="bbii"
+                }
+            };
+            return View(da);
         }
 
         //

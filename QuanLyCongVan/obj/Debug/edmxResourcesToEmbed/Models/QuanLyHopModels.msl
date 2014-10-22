@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanlyhopModelStoreContainer" CdmEntityContainer="QuanlyhopEntities">
+    <EntitySetMapping Name="BINHLUANs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.BINHLUAN">
+        <MappingFragment StoreEntitySet="BINHLUAN">
+          <ScalarProperty Name="DIENBIEN" ColumnName="DIENBIEN" />
+          <ScalarProperty Name="NGUOIBINHLUAN" ColumnName="NGUOIBINHLUAN" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="THOIGIAN" ColumnName="THOIGIAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CANBOes">
+      <EntityTypeMapping TypeName="QuanlyhopModel.CANBO">
+        <MappingFragment StoreEntitySet="CANBO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="HONHANVIEN" ColumnName="HONHANVIEN" />
+          <ScalarProperty Name="TENNHANVIEN" ColumnName="TENNHANVIEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="COHIEULUC" ColumnName="COHIEULUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COQUYENs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.COQUYEN">
+        <MappingFragment StoreEntitySet="COQUYEN">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="QUYENTRUYCAP" ColumnName="QUYENTRUYCAP" />
+          <ScalarProperty Name="KICHHOAT" ColumnName="KICHHOAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUOCHOPs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.CUOCHOP">
+        <MappingFragment StoreEntitySet="CUOCHOP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="CHUDE" ColumnName="CHUDE" />
+          <ScalarProperty Name="COHIEULUC" ColumnName="COHIEULUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIADIEMs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.DIADIEM">
+        <MappingFragment StoreEntitySet="DIADIEM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TENDIADIEM" ColumnName="TENDIADIEM" />
+          <ScalarProperty Name="DIACHIDIADIEM" ColumnName="DIACHIDIADIEM" />
+          <ScalarProperty Name="MIEUTA" ColumnName="MIEUTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIENBIENCUOCHOPs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.DIENBIENCUOCHOP">
+        <MappingFragment StoreEntitySet="DIENBIENCUOCHOP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_KEHOACH" ColumnName="ID_KEHOACH" />
+          <ScalarProperty Name="ID_LOAI" ColumnName="ID_LOAI" />
+          <ScalarProperty Name="TACGIA" ColumnName="TACGIA" />
+          <ScalarProperty Name="NGUOIGHI" ColumnName="NGUOIGHI" />
+          <ScalarProperty Name="THOIGIAN" ColumnName="THOIGIAN" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GIOITINHCANBOes">
+      <EntityTypeMapping TypeName="QuanlyhopModel.GIOITINHCANBO">
+        <MappingFragment StoreEntitySet="GIOITINHCANBO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YNGHIA" ColumnName="YNGHIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KEHOACHHOPs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.KEHOACHHOP">
+        <MappingFragment StoreEntitySet="KEHOACHHOP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CUOCHOP" ColumnName="CUOCHOP" />
+          <ScalarProperty Name="DIADIEM" ColumnName="DIADIEM" />
+          <ScalarProperty Name="NGUOICHUTRI" ColumnName="NGUOICHUTRI" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="THUKY" ColumnName="THUKY" />
+          <ScalarProperty Name="NGAYGIOBATDAU" ColumnName="NGAYGIOBATDAU" />
+          <ScalarProperty Name="SONGUOI" ColumnName="SONGUOI" />
+          <ScalarProperty Name="THOIGIANTIENHANH" ColumnName="THOIGIANTIENHANH" />
+          <ScalarProperty Name="COHIEULUC" ColumnName="COHIEULUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIDIENBIENs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.LOAIDIENBIEN">
+        <MappingFragment StoreEntitySet="LOAIDIENBIEN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YNGHIA" ColumnName="YNGHIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOIHOPs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.MOIHOP">
+        <MappingFragment StoreEntitySet="MOIHOP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NGUOINHAN" ColumnName="NGUOINHAN" />
+          <ScalarProperty Name="KEHOACHHOP" ColumnName="KEHOACHHOP" />
+          <ScalarProperty Name="QUYETDINH" ColumnName="QUYETDINH" />
+          <ScalarProperty Name="LYDOQUYETDINH" ColumnName="LYDOQUYETDINH" />
+          <ScalarProperty Name="DAQUYETDINH" ColumnName="DAQUYETDINH" />
+          <ScalarProperty Name="COHIEULUC" ColumnName="COHIEULUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHOMCOQUYENs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.NHOMCOQUYEN">
+        <MappingFragment StoreEntitySet="NHOMCOQUYEN">
+          <ScalarProperty Name="NHOM" ColumnName="NHOM" />
+          <ScalarProperty Name="QUYENTRUYCAP" ColumnName="QUYENTRUYCAP" />
+          <ScalarProperty Name="KICHHOAT" ColumnName="KICHHOAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHOMQUYENs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.NHOMQUYEN">
+        <MappingFragment StoreEntitySet="NHOMQUYEN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TENNHOM" ColumnName="TENNHOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUYENTRUYCAPs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.QUYENTRUYCAP">
+        <MappingFragment StoreEntitySet="QUYENTRUYCAP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TENQUYEN" ColumnName="TENQUYEN" />
+          <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUYETDINHCUANGUOINHANs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.QUYETDINHCUANGUOINHAN">
+        <MappingFragment StoreEntitySet="QUYETDINHCUANGUOINHAN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YNGHIA" ColumnName="YNGHIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANDANGNHAPs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.TAIKHOANDANGNHAP">
+        <MappingFragment StoreEntitySet="TAIKHOANDANGNHAP">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="ID_CANBO" ColumnName="ID_CANBO" />
+          <ScalarProperty Name="TRANGTHAIDANGNHAP" ColumnName="TRANGTHAIDANGNHAP" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="DANGNHAPSAUCUNG" ColumnName="DANGNHAPSAUCUNG" />
+          <ScalarProperty Name="COHIEULUC" ColumnName="COHIEULUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANGTHAIDANGNHAPs">
+      <EntityTypeMapping TypeName="QuanlyhopModel.TRANGTHAIDANGNHAP">
+        <MappingFragment StoreEntitySet="TRANGTHAIDANGNHAP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YNGHIA" ColumnName="YNGHIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANGTHAIKEHOACHes">
+      <EntityTypeMapping TypeName="QuanlyhopModel.TRANGTHAIKEHOACH">
+        <MappingFragment StoreEntitySet="TRANGTHAIKEHOACH">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YNGHIA" ColumnName="YNGHIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="THUOCNHOM" TypeName="QuanlyhopModel.THUOCNHOM" StoreEntitySet="THUOCNHOM">
+      <EndProperty Name="NHOMQUYEN">
+        <ScalarProperty Name="ID" ColumnName="IDNHOM" />
+      </EndProperty>
+      <EndProperty Name="TAIKHOANDANGNHAP">
+        <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

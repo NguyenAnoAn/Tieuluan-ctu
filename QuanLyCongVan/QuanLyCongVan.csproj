@@ -45,6 +45,8 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -170,15 +172,73 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\DataClasses.cs">
-      <DependentUpon>DataClasses.dbml</DependentUpon>
+    <Compile Include="Models\BINHLUAN.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DataClasses.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses.dbml</DependentUpon>
+    <Compile Include="Models\CANBO.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\COQUYEN.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CUOCHOP.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DIADIEM.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DIENBIENCUOCHOP.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GIOITINHCANBO.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KEHOACHHOP.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOAIDIENBIEN.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MNguoiDung.cs" />
+    <Compile Include="Models\MOIHOP.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NHOMCOQUYEN.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NHOMQUYEN.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuanLyHopModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHopModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuanLyHopModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuanLyHopModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHopModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QUYENTRUYCAP.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QUYETDINHCUANGUOINHAN.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TAIKHOANDANGNHAP.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TRANGTHAIDANGNHAP.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TRANGTHAIKEHOACH.cs">
+      <DependentUpon>QuanLyHopModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -238,10 +298,22 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Models\DataClasses.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EntityDeploy Include="Models\QuanLyHopModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyHopModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\QuanLyHopModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyHopModels.edmx</DependentUpon>
+      <LastGenOutput>QuanLyHopModels.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\QuanLyHopModels.edmx.diagram">
+      <DependentUpon>QuanLyHopModels.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\QuanLyHopModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyHopModels.edmx</DependentUpon>
+      <LastGenOutput>QuanLyHopModels.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -300,6 +372,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\QuanLyNguoiDung\Index.cshtml" />
+    <Content Include="Views\Shared\_itemCuochop.cshtml" />
+    <Content Include="Views\Shared\_itemBinhLuan.cshtml" />
+    <Content Include="Views\Shared\_itemThuMoihop.cshtml" />
+    <Content Include="Views\Shared\_itemNguoiDung.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -309,11 +385,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Models\DataClasses.dbml.layout">
-      <DependentUpon>DataClasses.dbml</DependentUpon>
-    </None>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

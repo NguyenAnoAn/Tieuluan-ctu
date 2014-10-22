@@ -51,15 +51,14 @@ mark {
 }
 .menu_left {
     float:left;
-    background-color:lightgreen;   
+    background-color:lightblue;   
     width:200px;
     margin:auto;
-    padding-bottom:2em;
-        
+    padding-bottom:2em;        
 }
 
     .menu_left .headpan {
-        background-color: darkgreen;
+        background-color: green;
         height: 25px;
         width: 200px;
         margin: auto;
@@ -71,13 +70,19 @@ mark {
          margin:0;
          width:200px;
     }
+    .menu_left .menuitem {
+        font-family:"Times New Roman", Verdana, Helvetica, Sans-Serif;
+        font-size:x-large;
+        color: darkgreen;
+    }
 .body_right {
     margin-left: 4px;
     float: left;
-    background-color:lightskyblue;   
-    width:720px;
+    background-color:whitesmoke;   
+    width:810px;
     padding-left:0.25em;
     padding-bottom:0.5em;
+   
 }
 .clear-fix:after {
     content: ".";
@@ -124,7 +129,7 @@ h5, h6 {
 ----------------------------------------------------------*/
 .content-wrapper {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1024px;   
 }
 
 #body {
@@ -784,4 +789,18 @@ tr.pager td {
         footer p {
             margin: 0;
         }
+}
+
+
+/*nguoi dùng định nghĩa
+    */
+
+.quanlytaikhoan {
+
+
+}
+.itemcanbo{
+   
+    padding-bottom:0.2em;
+    height:40px;
 }

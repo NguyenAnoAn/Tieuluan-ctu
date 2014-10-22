@@ -12,7 +12,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Hệ Thống Quản Lý Cuộc Họp", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Hệ Thống Quản Lý Họp Online", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -35,7 +35,7 @@
                 @if (Request.IsAuthenticated){
                 <div class="menu_left">
                     <div class="headpan">
-                      <h3 id="text" style="padding-left:3em">Chức năng</h3>  
+                      <h3 id="text" style="padding-left:3em; color:whitesmoke">Chức năng</h3>  
                     </div>
                     @RenderSection("menu_left", required: false)
                 </div>

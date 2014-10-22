@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Chức năng quản lý người dùng";
+﻿@model List<QuanLyCongVan.Models.MNguoiDung>
+@{
+    ViewBag.Title = "Quản lý tài khoản hệ thống";
 }
 @section featured { 
     <section class="featured">
@@ -12,5 +13,21 @@
     </section>
         }
 @section menu_left{
-
+    <lable  class ="menuitem">@Html.ActionLink("Thông Tin Cá Nhân","index","quanlynguoidung")</lable>   
+    <lable  class ="menuitem">@Html.ActionLink("Xem Thông Báo","index","quanlynguoidung")</lable>  
+    <lable  class ="menuitem">@Html.ActionLink("Tạo Người Dùng","index","quanlynguoidung")</lable>
+    <lable  class ="menuitem">@Html.ActionLink("Phân Quyền","index","quanlynguoidung")</lable>  
+    <lable class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</lable> 
     }
+
+<section class="quanlytaikhoan">
+    <div style="background-color:gray;">   
+        <label style="font-family:'Times New Roman'; font-size:25px;color:orangered;height:30px">Danh Sách Người Dùng</label>
+    </div>
+    
+        @foreach (var item in Model)
+        {
+            @Html.Partial("_itemNguoiDung",item);
+        } 
+  
+</section>
