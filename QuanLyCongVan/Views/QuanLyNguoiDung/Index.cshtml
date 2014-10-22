@@ -13,21 +13,32 @@
     </section>
         }
 @section menu_left{
-    <lable  class ="menuitem">@Html.ActionLink("Thông Tin Cá Nhân","index","quanlynguoidung")</lable>   
-    <lable  class ="menuitem">@Html.ActionLink("Xem Thông Báo","index","quanlynguoidung")</lable>  
-    <lable  class ="menuitem">@Html.ActionLink("Tạo Người Dùng","index","quanlynguoidung")</lable>
-    <lable  class ="menuitem">@Html.ActionLink("Phân Quyền","index","quanlynguoidung")</lable>  
-    <lable class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</lable> 
+    <p class ="menuitem">@Html.ActionLink("Thông Tin Cá Nhân","index","quanlynguoidung")</p>   
+    <p class ="menuitem">@Html.ActionLink("Xem Thông Báo","index","quanlynguoidung")</p>  
+    <p class ="menuitem">@Html.ActionLink("Tạo Người Dùng","index","quanlynguoidung")</p>
+    <p class ="menuitem">@Html.ActionLink("Phân Quyền","index","quanlynguoidung")</p>  
+    <p class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</p> 
     }
 
 <section class="quanlytaikhoan">
     <div style="background-color:gray;">   
         <label style="font-family:'Times New Roman'; font-size:25px;color:orangered;height:30px">Danh Sách Người Dùng</label>
     </div>
-    
-        @foreach (var item in Model)
+    <table class="table_quanlytaikhoan">
+        <tr>
+            <th style="border:1px solid">Họ tên</th>
+            <th style="border:1px solid">Chức vụ</th>
+            <th style="border:1px solid">Tên đăng nhập</th>
+            <th style="border:1px solid"></th>
+        </tr>
+        @foreach( var item in Model)
         {
-            @Html.Partial("_itemNguoiDung",item);
-        } 
-  
+            <tr>
+                <td style="border:1px solid"> @Html.DisplayFor(modelItem => item.Hoten) </td>
+                <td style="border:1px solid">@Html.DisplayFor(modelItem => item.Chucvu) </td>
+                <td style="border:1px solid">@Html.DisplayFor(modelItem => item.Username) </td>
+                <td style="border:1px solid"> @Html.ActionLink("Sửa","")<span>|</span> @Html.ActionLink("Xóa","") </td>               
+            </tr>
+        }
+    </table>
 </section>
