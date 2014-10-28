@@ -1,0 +1,5 @@
+E:\Web\QuanLyCuocHopol\Helper\bin\Debug\Helper.dll
+E:\Web\QuanLyCuocHopol\Helper\bin\Debug\Helper.pdb
+E:\Web\QuanLyCuocHopol\Helper\obj\Debug\Helpers.csprojResolveAssemblyReference.cache
+E:\Web\QuanLyCuocHopol\Helper\obj\Debug\Helper.dll
+E:\Web\QuanLyCuocHopol\Helper\obj\Debug\Helper.pdb

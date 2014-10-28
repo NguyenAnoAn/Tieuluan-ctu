@@ -166,11 +166,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuanLyHopController.cs" />
     <Compile Include="Controllers\QuanLyNguoiDungController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\KiemTraQuyen.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BINHLUAN.cs">
       <DependentUpon>QuanLyHopModels.tt</DependentUpon>
@@ -224,6 +226,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyHopModels.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\QuyenSuDung.cs" />
     <Compile Include="Models\QUYENTRUYCAP.cs">
       <DependentUpon>QuanLyHopModels.tt</DependentUpon>
     </Compile>
@@ -371,11 +374,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\QuanLyNguoiDung\Index.cshtml" />
     <Content Include="Views\Shared\_itemCuochop.cshtml" />
     <Content Include="Views\Shared\_itemBinhLuan.cshtml" />
     <Content Include="Views\Shared\_itemThuMoihop.cshtml" />
-    <Content Include="Views\Shared\_itemNguoiDung.cshtml" />
+    <Content Include="Views\QuanLyNguoiDung\_itemNguoiDung.cshtml" />
+    <Content Include="Views\QuanLyHop\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\QuanLyNguoiDung\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,6 +391,12 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\Helpers.csproj">
+      <Project>{f1785d45-32e9-435b-8d32-13e6465fa9f4}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -796,11 +796,11 @@ tr.pager td {
     */
 
 .quanlytaikhoan {
-
-
+    border: 1px solid;
 }
 .itemcanbo{
-   
+   border: 1px solid;
+   margin:5px;
     padding-bottom:0.2em;
     height:40px;
 }

@@ -1,0 +1,31 @@
+﻿
+@{
+       
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section menu_left{
+    @{
+        UInt32 Quyen = QuanLyCongVan.Helpers.KiemTraQuyen.ADMIN;
+        
+     }
+   
+    <p class ="menuitem">@Html.ActionLink("Thông Tin Cá Nhân","index","quanlynguoidung")</p>    
+    <p class ="menuitem">@Html.ActionLink("Xem Thông Báo","index","quanlynguoidung")</p> 
+    @if (QuanLyCongVan.Helpers.KiemTraQuyen.KiemTraCoQuyen(Quyen,QuanLyCongVan.Models.QuyenSuDung.TAONGUOIDUNG))
+    {  
+      <p class ="menuitem">@Html.ActionLink("Tạo Người Dùng","index","quanlynguoidung")</p>
+    }
+    @if (QuanLyCongVan.Helpers.KiemTraQuyen.KiemTraCoQuyen(Quyen,QuanLyCongVan.Models.QuyenSuDung.PHANQUYENNGUOIDUNG))
+    {
+    <p class ="menuitem">@Html.ActionLink("Phân Quyền","index","quanlynguoidung")</p>  
+    }
+    @if (QuanLyCongVan.Helpers.KiemTraQuyen.KiemTraCoQuyen(Quyen, QuanLyCongVan.Models.QuyenSuDung.TAONGUOIDUNG, QuanLyCongVan.Models.QuyenSuDung.PHANQUYENNGUOIDUNG))
+    {
+    <p class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</p> 
+    }
+ @if (QuanLyCongVan.Helpers.KiemTraQuyen.KiemTraCoQuyen(Quyen, QuanLyCongVan.Models.QuyenSuDung.TAONGUOIDUNG, QuanLyCongVan.Models.QuyenSuDung.PHANQUYENNGUOIDUNG))
+    {
+    <p class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</p> 
+    }
+    }
+@RenderBody()

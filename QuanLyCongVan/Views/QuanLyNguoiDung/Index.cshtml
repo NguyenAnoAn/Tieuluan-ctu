@@ -1,44 +1,17 @@
 ﻿@model List<QuanLyCongVan.Models.MNguoiDung>
 @{
-    ViewBag.Title = "Quản lý tài khoản hệ thống";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
-@section featured { 
-    <section class="featured">
-        <div class ="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-        </div>
-    </section>
-        }
-@section menu_left{
-    <p class ="menuitem">@Html.ActionLink("Thông Tin Cá Nhân","index","quanlynguoidung")</p>   
-    <p class ="menuitem">@Html.ActionLink("Xem Thông Báo","index","quanlynguoidung")</p>  
-    <p class ="menuitem">@Html.ActionLink("Tạo Người Dùng","index","quanlynguoidung")</p>
-    <p class ="menuitem">@Html.ActionLink("Phân Quyền","index","quanlynguoidung")</p>  
-    <p class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</p> 
-    }
 
 <section class="quanlytaikhoan">
     <div style="background-color:gray;">   
         <label style="font-family:'Times New Roman'; font-size:25px;color:orangered;height:30px">Danh Sách Người Dùng</label>
     </div>
-    <table class="table_quanlytaikhoan">
-        <tr>
-            <th style="border:1px solid">Họ tên</th>
-            <th style="border:1px solid">Chức vụ</th>
-            <th style="border:1px solid">Tên đăng nhập</th>
-            <th style="border:1px solid"></th>
-        </tr>
+ 
         @foreach( var item in Model)
         {
-            <tr>
-                <td style="border:1px solid"> @Html.DisplayFor(modelItem => item.Hoten) </td>
-                <td style="border:1px solid">@Html.DisplayFor(modelItem => item.Chucvu) </td>
-                <td style="border:1px solid">@Html.DisplayFor(modelItem => item.Username) </td>
-                <td style="border:1px solid"> @Html.ActionLink("Sửa","")<span>|</span> @Html.ActionLink("Xóa","") </td>               
-            </tr>
+            @Html.Partial("_itemNguoiDung",item)           
         }
-    </table>
+  
 </section>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyCongVan.Helper
+namespace QuanLyCongVan.Helpers
 {
     public class SHA1
     {
