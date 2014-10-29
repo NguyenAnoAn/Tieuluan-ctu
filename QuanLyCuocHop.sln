@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCongVan", "QuanLyCongVan\QuanLyCongVan.csproj", "{AC449232-339F-41BD-9AD6-8E20DC01939E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyHop", "QuanLyhop\QuanLyHop.csproj", "{AC449232-339F-41BD-9AD6-8E20DC01939E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCongVan.Tests", "QuanLyCongVan.Tests\QuanLyCongVan.Tests.csproj", "{5720DBFB-9921-41A4-A39D-09430FA32E5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyhop.Tests", "QuanLyhop.Tests\QuanLyhop.Tests.csproj", "{5720DBFB-9921-41A4-A39D-09430FA32E5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helper\Helpers.csproj", "{F1785D45-32E9-435B-8D32-13E6465FA9F4}"
 EndProject
