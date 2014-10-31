@@ -804,3 +804,13 @@ tr.pager td {
     padding-bottom:0.2em;
     height:40px;
 }
+
+.danhsachhop {
+  border: 1px solid;
+}
+.itemcuochop {
+    border: 1px solid;
+    margin:5px;
+    padding-bottom:0.2em;
+    height:40px;
+}

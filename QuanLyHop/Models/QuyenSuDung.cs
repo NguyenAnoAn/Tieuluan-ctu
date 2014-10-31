@@ -11,6 +11,9 @@ namespace QuanLyHop.Models
         TAONGUOIDUNG = 0x2,
         PHANQUYENNGUOIDUNG = 0x4,
         LAPKEHOACHHOP = 0x8,
+        XEMCACCUOCHOP =0x10,
+        BINHLUANCUOCHOP = 0x20,
+        BINHLUANVOITENNGUOIKHAC=0x40,
 
     }
 }

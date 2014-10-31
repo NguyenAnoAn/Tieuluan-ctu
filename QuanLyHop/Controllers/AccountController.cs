@@ -37,7 +37,7 @@ namespace QuanLyHop.Controllers
         {
           //  if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
            if(true)
-            {
+            {               
                 FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
                 return RedirectToLocal(returnUrl);
             }

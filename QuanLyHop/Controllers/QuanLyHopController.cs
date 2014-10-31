@@ -1,8 +1,11 @@
-﻿using System;
+﻿using QuanLyHop.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace QuanLyHop.Controllers
 {
@@ -13,7 +16,10 @@ namespace QuanLyHop.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            string username = User.Identity.Name;
+            QuanLyHop.Models.QuanlyhopEntities data = new Models.QuanlyhopEntities();
+            data.CUOCHOPs.Load();            
+            return View(data.CUOCHOPs);
         }
 
         //

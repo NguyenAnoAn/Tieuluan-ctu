@@ -5,8 +5,7 @@
 }
 @section menu_left{
     @{
-        UInt32 Quyen = QuanLyHop.Helpers.KiemTraQuyen.ADMIN;
-        
+        UInt32 Quyen = QuanLyHop.Helpers.KiemTraQuyen.ADMIN;        
      }
    
     <p class ="menuitem">@Html.ActionLink("Thông Tin Cá Nhân","index","quanlynguoidung")</p>    
@@ -23,9 +22,13 @@
     {
     <p class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</p> 
     }
- @if (QuanLyHop.Helpers.KiemTraQuyen.KiemTraCoQuyen(Quyen, QuanLyHop.Models.QuyenSuDung.TAONGUOIDUNG, QuanLyHop.Models.QuyenSuDung.PHANQUYENNGUOIDUNG))
+ @if (QuanLyHop.Helpers.KiemTraQuyen.KiemTraCoQuyen(Quyen, QuanLyHop.Models.QuyenSuDung.TAONGUOIDUNG, QuanLyHop.Models.QuyenSuDung.XEMCACCUOCHOP))
     {
-    <p class ="menuitem">@Html.ActionLink("Quản Lý Tài Khoản","index","quanlynguoidung")</p> 
+    <p class ="menuitem">@Html.ActionLink("Quản Lý Cuộc Họp","index","quanlyhop")</p> 
+    }
+ @if (QuanLyHop.Helpers.KiemTraQuyen.KiemTraCoQuyen(Quyen, QuanLyHop.Models.QuyenSuDung.TAONGUOIDUNG, QuanLyHop.Models.QuyenSuDung.XEMCACCUOCHOP))
+    {
+    <p class ="menuitem">@Html.ActionLink("Tạo Cuộc Họp","index","quanlynguoidung")</p> 
     }
     }
 @RenderBody()

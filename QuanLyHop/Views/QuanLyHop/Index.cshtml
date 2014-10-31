@@ -1,6 +1,16 @@
-﻿@{
+﻿@model  System.Data.Entity.DbSet<QuanLyHop.Models.CUOCHOP>
+@{
     ViewBag.Title = "Các cuộc họp ";
     Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
-
-<h2>Danh sách các cuộc họp</h2>
+<section class="danhsachhop">
+    <div style="background-color:gray;">
+       <label style="font-family:'Times New Roman'; font-size:25px;color:orangered;height:30px">Danh sách các cuộc họp</label>
+    </div>
+    <div>
+        @foreach (var item in Model.ToArray())
+        {
+            @Html.Partial("_itemCuochop", item); 
+        }
+    </div>
+</section>
